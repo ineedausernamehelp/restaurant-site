@@ -13,7 +13,7 @@
 <body>
     <header>
         <nav>
-            <div>logo</div>
+            <img src="img/logo.png" alt="logo kan niet geladen worden" class="nav-text">
             <h2 class="nav-text">menu</h2>
             <h2 class="nav-text">contact</h2>
         </nav>   
