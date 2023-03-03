@@ -12,13 +12,17 @@
 </head>
 <body>
     <header>
+        <img src="img/logo.png" alt="logo kan niet geladen worden" class="nav-text">
         <nav>
-            <img src="img/logo.png" alt="logo kan niet geladen worden" class="nav-text">
-            <h2 class="nav-text">menu</h2>
-            <h2 class="nav-text">contact</h2>
+            <a href="" >Menu</a>
+            <a href="">Contact</a>
         </nav>   
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+        <img src="img/food.jpg" alt="alt" class="main-img">
+    </main>
+    <footer>
+
+    </footer>
 </body>
 </html> 

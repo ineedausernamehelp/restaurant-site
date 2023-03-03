@@ -6,15 +6,47 @@
     font-family: 'Roboto', sans-serif;
 }
 header{
+    display: flex;
     height: 15%;
 }
 nav{
     background-color: #5F6487;
     display: flex;
-    flex-direction: row;
+    flex-direction: row;    
     justify-content: flex-end;
-    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;    
 }
-.nav-text{
+a{
     background-color: #5F6487;
+    text-decoration: none;
+    font-size: 190%;
+    height: 40%;
+    text-align: right;
+    padding-left: 150px;
+    color: #FFFFFF;
+    font-variant: 'Roboto';
+    
+    
+}
+img{
+    background-color: #5F6487;
+
+}
+a:last-child{
+    padding-right: 70px;
+}
+
+main{
+    height: 70%;
+}
+
+.main-img{
+    width: 100%;
+    background-color:  rgba(0, 0, 0, 5);
+    z-index: 2;
+}
+
+footer{
+    height: 15%;
 }
