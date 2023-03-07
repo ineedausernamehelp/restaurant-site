@@ -17,18 +17,18 @@
     <header>
         <img src="img/logo.png" alt="logo kan niet geladen worden" class="nav-text">
         <nav>
-            <a href="pages/menu.php" class="nav-links">Menu</a>
-            <a href="pages/contact.php" class="nav-links">Contact</a>
+            <a href="menu.php" class="nav-links">Menu</a>
+            <a href="contact.php" class="nav-links">Contact</a>
         </nav>
     </header>
     <main>
         <div class="main-img-flex opacity">
             <img src="img/food.jpg" alt="alt" class="main-img">
-            <h1 class="main-text welkom-tekst" >Welkom</h1>
+            <h1 class="main-text welkom-tekst">Welkom</h1>
             <p class="main-text beschrijving-tekst">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor.</p>
             <div class="main-text main-knop">
-                <a href="pages/menu.php" class="main-knop-tekst">Bekijk ons menu</a>
+                <a href="menu.php" class="main-knop-tekst">Bekijk ons menu</a>
             </div>
         </div>
     </main>
