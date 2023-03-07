@@ -19,10 +19,10 @@
         </nav>   
     </header>
     <main>
-        <img src="img/food.jpg" alt="alt" class="main-img">
+        <img src="img/food.jpg" alt="main image kan niet geladen worden" class="main-img">
     </main>
     <footer>
-
+        <img src="img/footer-img.png" alt="footer image kan niet geladen worden" class="footer-img">
     </footer>
 </body>
 </html> 
