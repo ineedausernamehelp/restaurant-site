@@ -1,13 +1,17 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: #4a4e69;
   height: 100%;
   font-family: "Roboto", sans-serif;
+}
+body,
+html {
+  background-color: #4a4e69;
 }
 header {
   display: flex;
   height: 15%;
+  border-bottom: 1px solid #5C607D;
 }
 nav {
   display: flex;
@@ -24,8 +28,8 @@ nav {
   color: #ffffff;
   font-variant: "Roboto";
 }
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
 .nav-links:last-child {
@@ -38,39 +42,44 @@ main {
 
 .main-img {
   position: relative;
-  background-image: url("food.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  width: 100%;
   mix-blend-mode: overlay;
   opacity: 0.9;
 }
+.main-img-flex{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
 
 .main-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: transparent;
-  color: white;
+  color: #ffffff;
 }
-.welkom-tekst {
-  margin-top: 10%;
+.welkom-tekst{
+    margin-top: -7.5%;
 }
-.beschrijving-tekst {
-  margin-top: 15%;
+.beschrijving-tekst{
+    margin-top: -4%;
 }
-.main-knop{
-    width: 10%;
-    height: 10%;
-    background-color: #5F6487;
-    margin-top: 5%
+.main-knop {
+  width: 10%;
+  height: 10%;
+  background-color: #5f6487;
+  margin-top: 5%;
 }
-.main-knop-tekst{
-    display: flex;
-    justify-self: center;
-    color: white;
-
+.main-knop-tekst {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
 }
 footer {
   height: 15%;
