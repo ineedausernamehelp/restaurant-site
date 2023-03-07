@@ -16,8 +16,7 @@ nav {
   align-items: center;
   width: 100%;
 }
-a {
-  text-decoration: none;
+.nav-links {
   font-size: 190%;
   height: 40%;
   text-align: right;
@@ -25,8 +24,11 @@ a {
   color: #ffffff;
   font-variant: "Roboto";
 }
+a{
+    text-decoration: none;
+}
 
-a:last-child {
+.nav-links:last-child {
   padding-right: 70px;
 }
 
@@ -35,10 +37,40 @@ main {
 }
 
 .main-img {
-  width: 100%;
-  background: url(img/food.jpg);
+  position: relative;
+  background-image: url("food.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   mix-blend-mode: overlay;
   opacity: 0.9;
+}
+
+.main-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  color: white;
+}
+.welkom-tekst {
+  margin-top: 10%;
+}
+.beschrijving-tekst {
+  margin-top: 15%;
+}
+.main-knop{
+    width: 10%;
+    height: 10%;
+    background-color: #5F6487;
+    margin-top: 5%
+}
+.main-knop-tekst{
+    display: flex;
+    justify-self: center;
+    color: white;
+
 }
 footer {
   height: 15%;

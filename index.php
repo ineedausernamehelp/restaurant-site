@@ -14,12 +14,18 @@
     <header>
         <img src="img/logo.png" alt="logo kan niet geladen worden" class="nav-text">
         <nav>
-            <a href="" >Menu</a>
-            <a href="">Contact</a>
+            <a href="pages/menu.php" class="nav-links">Menu</a>
+            <a href="pages/contact.php" class="nav-links">Contact</a>
         </nav>   
-    </header>
+    </header>   
     <main>
-        <img src="img/food.jpg" alt="main image kan niet geladen worden" class="main-img">
+        <div class="main-img main-image-flex">
+            <h1 class="main-text welkom-tekst">Welkom</h1>
+            <p class="main-text beschrijving-tekst">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            <div class="main-text main-knop">
+                <a href="pages/menu.php" class="main-knop-tekst">Bekijk ons menu</a>
+            </div>
+        </div>
     </main>
     <footer>
         <img src="img/footer-img.png" alt="footer image kan niet geladen worden" class="footer-img">
