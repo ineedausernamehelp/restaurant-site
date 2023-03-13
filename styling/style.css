@@ -8,11 +8,14 @@ body,
 html {
   background-color: #4a4e69;
 }
+/*header*/
 header {
+  background-color: #5f6487;
   display: flex;
   height: 15%;
-  border-bottom: 1px solid #5C607D;
+  border-bottom: 1px solid #5c607d;
 }
+/*nav*/
 nav {
   display: flex;
   flex-direction: row;
@@ -35,7 +38,7 @@ a {
 .nav-links:last-child {
   padding-right: 70px;
 }
-
+/* main frontpage */
 main {
   height: 70%;
 }
@@ -46,16 +49,16 @@ main {
   mix-blend-mode: overlay;
   opacity: 0.9;
 }
-.main-img-flex{
-    display: flex;
-    justify-content: center;
-    text-align: center;
+.main-img-flex {
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .main-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -63,11 +66,11 @@ main {
   background-color: transparent;
   color: #ffffff;
 }
-.welkom-tekst{
-    margin-top: -7.5%;
+.welkom-tekst {
+  margin-top: -7.5%;
 }
-.beschrijving-tekst{
-    margin-top: -4%;
+.beschrijving-tekst {
+  margin-top: -4%;
 }
 .main-knop {
   width: 10%;
@@ -81,6 +84,7 @@ main {
   align-items: center;
   color: #ffffff;
 }
+/*footer*/
 footer {
   height: 15%;
   display: flex;
@@ -90,4 +94,54 @@ footer {
 .footer-img {
   width: 15%;
   height: 100%;
+}
+/*menu blokken*/
+.main-wrapper {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.menu-block {
+  display: flex;
+  width: 50%;
+  height: 40%;
+  background-color: white;
+  border-radius: 7.5%;
+  
+}
+.menu-tekst {
+  width: 75%;
+}
+.gerechtnaam {
+  display: flex;
+  justify-content: center;
+  height: 20%;
+  margin-top: 2.5%;
+}
+.prijs-reviews-menu-tekst {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  height: 10%;
+}
+.beschrijving-gerecht-tekst {
+  height: 3%;
+  margin-left: 1%;
+  margin-top: 2%;
+}
+.menu-foto {
+  border-right: solid black 2px;
+}
+.winkelmand-tekst {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 55%;
+  margin-right: 2.5%;
+}
+
+.plus {
+  font-size: xx-large;
 }
