@@ -1,12 +1,12 @@
 * {
   margin: 0;
   padding: 0;
-  height: 100%;
   font-family: "Roboto", sans-serif;
 }
 body,
 html {
   background-color: #4a4e69;
+  height: 100%;
 }
 /*header*/
 header {
@@ -14,7 +14,10 @@ header {
   display: flex;
   height: 15%;
   border-bottom: 1px solid #5c607d;
+  position: sticky; 
+  
 }
+
 /*nav*/
 nav {
   display: flex;
@@ -39,17 +42,16 @@ a {
   padding-right: 70px;
 }
 /* main frontpage */
-main {
-  height: 70%;
-}
 
 .main-img {
+  height: 50%;
   position: relative;
   width: 100%;
   mix-blend-mode: overlay;
   opacity: 0.9;
 }
 .main-img-flex {
+  height: 1%;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -97,18 +99,20 @@ footer {
 }
 /*menu blokken*/
 .main-wrapper {
-  margin-top: 5%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
 }
+
 .menu-block {
   display: flex;
   width: 50%;
-  height: 40%;
+  height: 30%;
   background-color: white;
   border-radius: 7.5%;
+  margin-top: 5%;
   
 }
 .menu-tekst {
