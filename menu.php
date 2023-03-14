@@ -7,11 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styling/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,300;1,400&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header class="header-margin">
-        <img src="img/logo.png" alt="logo kan niet geladen worden" class="nav-text">
+        <a href="index.php">
+            <img src="img/logo.png" alt="logo kan niet geladen worden" class="nav-text logo-size">
+        </a>
+        <nav>
+            <a href="login.php" class="nav-links">Login</a>
+            <a href="contact.php" class="nav-links">Contact</a>
+        </nav>
     </header>
     <main class="main-wrapper">
         <div class=" menu-block">
