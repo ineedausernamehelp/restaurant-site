@@ -24,27 +24,20 @@
 </head>
 
 <body>
-    <header class="header-margin">
-        <a href="index.php">
-            <img src="img/logo.png" alt="logo kan niet geladen worden" class="nav-text logo-size">
-        </a>
-        <nav>
-            <a href="menu.php" class="nav-links">Menu</a>
-            <a href="login.php" class="nav-links">Login</a>
-        </nav>
+    <?php include_once('header.php'); ?>
 
-    </header>
     <main class="contact-form-height">
         <form action="contact.php" method="post" class="main-wrapper">
             <h2>neem contact op</h2>
             <input type="reden voor contact" class="kleine-box" placeholder="reden voor contact">
             <input type="naam" class="kleine-box" placeholder="naam">
             <input type="email" class="kleine-box" placeholder="email">
-            <input type="telefoonnum" class="kleine-box" placeholder="telefoon nummer">
             <input type="feedback" class="grote-box" placeholder="uw bericht">
             <input type="submit" class="submit-knop">
         </form>
     </main>
+    
 </body>
+
 
 </html>

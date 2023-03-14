@@ -14,15 +14,8 @@
 </head>
 
 <body>
-    <header class="header-margin">
-        <a href="index.php">
-            <img src="img/logo.png" alt="logo kan niet geladen worden" class="nav-text logo-size">
-        </a>
-        <nav>
-            <a href="login.php" class="nav-links">Login</a>
-            <a href="contact.php" class="nav-links">Contact</a>
-        </nav>
-    </header>
+    <?php include_once('header.php'); ?>
+
     <main class="main-wrapper">
         <div class=" menu-block">
             <img src="https://images.newyorkpizza.nl/Products/Original/Brooklyn-8047.png" alt="" class="menu-foto">
@@ -101,9 +94,8 @@
         </div>
 
     </main>
-    <footer class="footer-margin">
+    <?php include_once('footer.php'); ?>
 
-    </footer>
 
 </body>
 

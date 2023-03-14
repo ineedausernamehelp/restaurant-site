@@ -14,14 +14,8 @@
 </head>
 
 <body>
-    <header>
-        <img src="img/logo.png" alt="logo kan niet geladen worden" class="nav-text">
-        <nav>
-            <a href="login.php" class="nav-links">Login</a>
-            <a href="menu.php" class="nav-links">Menu</a>
-            <a href="contact.php" class="nav-links">Contact</a>
-        </nav>
-    </header>
+    <?php include_once('header.php'); ?>
+
     <main class="frontpage-height">
         <div class="main-img-flex opacity">
             <img src="img/food.jpg" alt="alt" class="main-img">
@@ -33,9 +27,7 @@
             </div>
         </div>
     </main>
-    <footer>
-        <img src="img/footer-img.png" alt="footer image kan niet geladen worden" class="footer-img">
-    </footer>
+    <?php include_once('footer.php'); ?>
 </body>
 
 </html>
