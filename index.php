@@ -21,7 +21,7 @@
             <a href="contact.php" class="nav-links">Contact</a>
         </nav>
     </header>
-    <main>
+    <main class="frontpage-height">
         <div class="main-img-flex opacity">
             <img src="img/food.jpg" alt="alt" class="main-img">
             <h1 class="main-text welkom-tekst">Welkom</h1>

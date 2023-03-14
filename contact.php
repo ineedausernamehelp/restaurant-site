@@ -1,9 +1,9 @@
 <?php
-if (isset($_POST["username"]) && isset($_POST["password"])) {
-    if ($_POST["username"] == "bozo" && $_POST["password"] == "123") {
-        echo "succes";
-    }
-}
+//if (isset($_POST["username"]) && isset($_POST["password"])) {
+// if ($_POST["username"] == "bozo" && $_POST["password"] == "123") {
+//    echo "succes";
+//}
+//}
 
 
 
@@ -20,7 +20,10 @@ if (isset($_POST["username"]) && isset($_POST["password"])) {
 </head>
 
 <body>
-    <header></header>
+    <header>
+        <img src="img/logo.png" alt="logo kan niet geladen worden" class="nav-text">
+
+    </header>
     <main>
         <form action="contact.php" method="post">
             <input type="text" name="username">
