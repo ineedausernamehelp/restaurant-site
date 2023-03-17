@@ -14,7 +14,8 @@
 </head>
 
 <body>
-    <?php include_once('header.php'); ?>
+
+    <?php include_once('pages/header.php'); ?>
 
     <main class="frontpage-height">
         <div class="main-img-flex opacity">
@@ -27,7 +28,7 @@
             </div>
         </div>
     </main>
-    <?php include_once('footer.php'); ?>
+    <?php include_once('pages/footer.php'); ?>
 </body>
 
 </html>

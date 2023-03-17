@@ -14,14 +14,14 @@
 </head>
 
 <body>
-    <?php include_once('header.php');
+    <?php include_once('pages/header.php');
 
 
-    include('menu-block.php'); 
-    include('menu-block.php'); 
+    include('pages/menu-block.php'); 
+    include('pages/menu-block.php'); 
     
 
-    include_once('footer.php'); ?>
+    include_once('pages/footer.php'); ?>
 
 
 </body>

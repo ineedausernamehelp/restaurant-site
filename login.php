@@ -14,12 +14,16 @@
 </head>
 
 <body>
-    <?php include_once('header.php'); ?>
-    <main>
-        <form action="">
-
+    <?php include_once('pages/header.php'); ?>
+    <main class="contact-form-height">
+        <form action="contact.php" method="post" class="main-wrapper">
+            <h2>Login</h2>
+            <input type="gebruikersnaam" class="kleine-box" placeholder="Gebruikersnaam">
+            <input type="password" class="kleine-box" placeholder="Wachtwoord">
+            <input type="submit" class="submit-knop">
         </form>
     </main>
+
 
 </body>
 

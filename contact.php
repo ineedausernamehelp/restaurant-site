@@ -24,7 +24,7 @@
 </head>
 
 <body>
-    <?php include_once('header.php'); ?>
+    <?php include_once('pages/header.php'); ?>
 
     <main class="contact-form-height">
         <form action="contact.php" method="post" class="main-wrapper">
@@ -36,7 +36,7 @@
             <input type="submit" class="submit-knop">
         </form>
     </main>
-    
+
 </body>
 
 
