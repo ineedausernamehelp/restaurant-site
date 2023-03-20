@@ -1,3 +1,7 @@
+<?php
+include_once('pages/pdo.php');
+//var_dump($_POST);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,14 +18,22 @@
 </head>
 
 <body>
-    <?php include_once('pages/header.php'); ?>
+    <?php include_once('pages/header.php');
+    $data = $conn->query("SELECT * FROM users")->fetchAll();
+    ?>
     <main class="contact-form-height">
-        <form action="contact.php" method="post" class="main-wrapper">
+        <form action="login.php" method="post" class="main-wrapper">
             <h2>Login</h2>
-            <input type="gebruikersnaam" class="kleine-box" placeholder="Gebruikersnaam">
-            <input type="password" class="kleine-box" placeholder="Wachtwoord">
-            <input type="submit" class="submit-knop">
+            <input type="input" class="kleine-box" name="gebruikersnaam" placeholder="Gebruikersnaam">
+            <input type="password" class="kleine-box" name="password" placeholder="Wachtwoord">
+
+            <input type="submit" class="submit-knop" value="login">
         </form>
+        <?php foreach ($data as $row) { ?>
+            <?php if ($_POST['gebruikersnaam'] == $row['username'] && $_POST['password'] == $row['password']) { ?>
+                <?php echo "gelukt"; ?>
+            <?php } ?>
+        <?php } ?>
     </main>
 
 

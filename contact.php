@@ -1,11 +1,4 @@
 <?php
-//if (isset($_POST["username"]) && isset($_POST["password"])) {
-// if ($_POST["username"] == "bozo" && $_POST["password"] == "123") {
-//    echo "succes";
-//}
-//}
-
-
 
 ?>
 <!DOCTYPE html>
@@ -24,7 +17,9 @@
 </head>
 
 <body>
-    <?php include_once('pages/header.php'); ?>
+    <?php include_once('pages/header.php'); 
+          include_once('pages/pdo.php');
+    ?>
 
     <main class="contact-form-height">
         <form action="contact.php" method="post" class="main-wrapper">
