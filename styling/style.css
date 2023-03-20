@@ -100,10 +100,12 @@ footer {
   flex-direction: row;
   justify-content: flex-end;
 }
-.footer-img {
-  width: 15%;
-  height: 100%;
+.footer-img{
+  height: 80%;
+  width: 5%;
+  margin-left: 1%;
 }
+
 /*menu blokken*/
 .main-wrapper {
   display: flex;
