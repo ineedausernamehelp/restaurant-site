@@ -19,12 +19,13 @@
 
     <main class="frontpage-height">
         <div class="main-img-flex opacity">
-            <img src="img/food.jpg" alt="alt" class="main-img">
-            <h1 class="main-text welkom-tekst">Welkom</h1>
-            <p class="main-text beschrijving-tekst">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor.</p>
-            <div class="main-text main-knop">
-                <a href="menu.php" class="main-knop-tekst">Bekijk ons menu</a>
+            <div class="frontpage-text-align">
+                <h1 class="main-text welkom-tekst">Welkom</h1>
+                <p class="main-text beschrijving-tekst">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor.</p>
+                <div class="main-text main-knop">
+                    <a href="menu.php" class="main-knop-tekst">Bekijk ons menu</a>
+                </div>
             </div>
         </div>
     </main>

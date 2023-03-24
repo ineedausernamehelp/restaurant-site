@@ -23,6 +23,7 @@ nav {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+  justify-content: space-around;
   width: 100%;
   
 }
@@ -30,7 +31,6 @@ nav {
   font-size: 190%;
   height: 40%;
   text-align: right;
-  padding-left: 150px;
   color: #ffffff;
   font-variant: "Roboto";
 }
@@ -49,9 +49,11 @@ a {
 
 .frontpage-height {
   height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .main-img {
-  position: relative;
   width: 100%;
   mix-blend-mode: overlay;
   opacity: 0.9;
@@ -60,31 +62,41 @@ a {
   height: 100%;
   display: flex;
   justify-content: center;
+  justify-content: space-between;
+}
+.welkom-tekst{
+  display: flex;
   text-align: center;
+  justify-content: center;
+}
+.beschrijving-tekst{
+  display: flex;
+  text-align: center;
+  justify-content: center;
 }
 
 .main-text {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: transparent;
+  justify-content: space-around;  
   color: #ffffff;
 }
-.welkom-tekst {
-  margin-top: -7.5%;
-}
-.beschrijving-tekst {
-  margin-top: -4%;
+.frontpage-text-align{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
 }
 .main-knop {
   width: 10%;
   height: 10%;
   background-color: #5f6487;
-  margin-top: 5%;
   border-radius: 5%;
 }
 .main-knop-tekst {
@@ -92,6 +104,7 @@ a {
   justify-content: center;
   align-items: center;
   color: #ffffff;
+
 }
 /*footer*/
 footer {
@@ -186,5 +199,17 @@ form{
   width: 30%;
   border-radius: 20%;
 }
+.menu-aanpassen{
+  height: 100%;
+}
 
-
+@media screen and (max-width: 900px){
+  .menu-tekst{
+    font-size: small;
+  }
+} 
+@media screen and (max-width: 670px) {
+  .menu-tekst{
+    font-size: x-small;
+  }
+}

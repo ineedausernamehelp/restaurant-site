@@ -1,6 +1,7 @@
 <?php
 include_once('pages/pdo.php');
-//var_dump($_POST);
+//gebruikersnaam admin
+//password admin123
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,11 +29,17 @@ include_once('pages/pdo.php');
             <input type="password" class="kleine-box" name="password" placeholder="Wachtwoord">
 
             <input type="submit" class="submit-knop" value="login">
-        </form>
-        <?php foreach ($data as $row) { ?>
+            <?php foreach ($data as $row) { ?>
             <?php if ($_POST['gebruikersnaam'] == $row['username'] && $_POST['password'] == $row['password']) { ?>
-                <?php echo "gelukt"; ?>
+                <div>
+                    <p>gelukt wat wil je doen</p>
+                    
+                </div>
+                <a href="menu-aanpassen.php">menu aanpassen</a>
+                <a href="feedback-bekijken.php">feedback bekijken</a>
             <?php } ?>
+        </form>
+        
         <?php } ?>
     </main>
 
