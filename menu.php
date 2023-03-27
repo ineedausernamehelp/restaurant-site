@@ -17,9 +17,7 @@
     <?php include_once('pages/header.php');
 
 
-    include('pages/menu-block.php'); 
-    include('pages/menu-block.php'); 
-    
+    include('pages/menu-block.php');     
 
     include_once('pages/footer.php'); ?>
 

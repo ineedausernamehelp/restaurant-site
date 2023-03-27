@@ -1,5 +1,5 @@
 <?php
-
+    include_once('pages/pdo.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,20 +15,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,300;1,400&display=swap"
         rel="stylesheet">
 </head>
+<?php
+if(isset($_POST["submit"])){
+    $reden_contact = (isset($_POST['reden_voor_contact']) ? $_POST['reden_voor_contact'] : '');
+    $feedback_naam = (isset($_POST['naam']) ? $_POST['naam'] : '');
+    $feedback_email = (isset($_POST['email']) ? $_POST['email'] : '');
+    $feedback_bericht = (isset($_POST['feedback']) ? $_POST['feedback'] : '');
+    
+    
+    $sql = "INSERT INTO contact (reden_contact , feedback_naam , feedback_email ,feedback_bericht) VALUES (?,?,?,?)";
+    $conn->prepare($sql)->execute([
+        $reden_contact, $feedback_naam, $feedback_email, $feedback_bericht
+    ]);
+
+
+}
+
+
+
+?>
+
 
 <body>
     <?php include_once('pages/header.php'); 
-          include_once('pages/pdo.php');
+
     ?>
 
     <main class="contact-form-height">
         <form action="contact.php" method="post" class="main-wrapper">
             <h2>neem contact op</h2>
-            <input type="reden voor contact" class="kleine-box" placeholder="reden voor contact">
-            <input type="naam" class="kleine-box" placeholder="naam">
-            <input type="email" class="kleine-box" placeholder="email">
-            <input type="feedback" class="grote-box" placeholder="uw bericht">
-            <input type="submit" class="submit-knop">
+            <input type="input" name="reden_voor_contact" class="kleine-box" placeholder="reden voor contact">
+            <input type="input" name="naam" class="kleine-box" placeholder="naam">
+            <input type="input" name="email" class="kleine-box" placeholder="email">
+            <input type="input" name="feedback" class="grote-box" placeholder="uw bericht">
+            <input type="submit" class="submit-knop" name="submit">
         </form>
     </main>
 

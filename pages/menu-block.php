@@ -25,7 +25,7 @@ include_once('pages/pdo.php');
         <main class="main-wrapper">
 
             <div class=" menu-block">
-                <img src="https://images.newyorkpizza.nl/Products/Original/Brooklyn-8047.png" alt="" class="menu-foto">
+                <img src=<?php echo $row['image']; ?> alt="foto van eten" class="menu-foto">
                 <div class="menu-tekst">
                     <h2 class="gerechtnaam">
                         <?php echo $row['naam']; ?>
