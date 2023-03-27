@@ -30,16 +30,16 @@ include_once('pages/pdo.php');
 
             <input type="submit" class="submit-knop" value="login">
             <?php foreach ($data as $row) { ?>
-            <?php if ($_POST['gebruikersnaam'] == $row['username'] && $_POST['password'] == $row['password']) { ?>
-                <div>
-                    <p>gelukt wat wil je doen</p>
-                    
-                </div>
-                <a href="menu-aanpassen.php">menu aanpassen</a>
-                <a href="feedback-bekijken.php">feedback bekijken</a>
-            <?php } ?>
-        </form>
-        
+                <?php if ($_POST['gebruikersnaam'] == $row['username'] && $_POST['password'] == $row['password']) { ?>
+                    <div>
+                        <p>gelukt wat wil je doen</p>
+
+                    </div>
+                    <a href="menu-aanpassen.php">menu aanpassen</a>
+                    <a href="feedback-bekijken.php">feedback bekijken</a>
+                <?php } ?>
+            </form>
+
         <?php } ?>
     </main>
 

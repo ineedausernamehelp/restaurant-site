@@ -19,30 +19,16 @@ include_once('pages/pdo.php');
 </head>
 
 <body>
-<?php include_once('pages/header.php')?>
-        <main class="contact-form-height menu-aanpassen">
+    <?php include_once('pages/header.php') ?>
+    <main class="contact-form-height menu-aanpassen">
 
-            <form action="menu-aanpassen.php" method="post" class="main-wrapper">
-                <h2>Menu aanpassen</h2>
-                <input type="input" class="kleine-box" name="GerechtID" placeholder="GerechtID Verandert niet">
-                <?php foreach ($data as $row) { ?>
-                 
-                        <input type="input" class="kleine-box" name="Naam" placeholder="Naam veranderen">
-                        <input type="input" class="kleine-box" name="prijs" placeholder="Prijs aanpassen">
-                        <input type="input" class="kleine-box" name="reviews" placeholder="Reviews aanpassen">
-                        <input type="input" class="grote-box" name="beschrijving" placeholder="Beschrijving aanpassen">
-                        <?php $row['naam'] == $_POST['Naam']; ?>
-                        <?php $row['prijs'] == $_POST['prijs']; ?>
-                        <?php $row['naam'] == $_POST['reviews']; ?>
-                        <?php $row['naam'] == $_POST['beschrijving']; ?>
-
-
-
-                    <?php } ?>
-
-                <input type="submit" class="submit-knop" value="gerechten-aanpassen">
-        </main>
-        <footer></footer>
+        <form action="menu-aanpassen.php" method="post" class="main-wrapper">
+            <h2>Menu aanpassen</h2>
+            <input type="input" class="kleine-box" name="GerechtID" placeholder="GerechtID Verandert niet">
+            <input type="submit" class="submit-knop" value="gerechten-aanpassen">
+        </form>
+    </main>
+    <footer></footer>
 </body>
 
 </html>

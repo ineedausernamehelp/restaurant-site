@@ -1,5 +1,5 @@
 <?php
-    include_once('pages/pdo.php');
+include_once('pages/pdo.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,16 +16,19 @@
         rel="stylesheet">
 </head>
 <?php
-if(isset($_POST["submit"])){
+if (isset($_POST["submit"])) {
     $reden_contact = (isset($_POST['reden_voor_contact']) ? $_POST['reden_voor_contact'] : '');
     $feedback_naam = (isset($_POST['naam']) ? $_POST['naam'] : '');
     $feedback_email = (isset($_POST['email']) ? $_POST['email'] : '');
     $feedback_bericht = (isset($_POST['feedback']) ? $_POST['feedback'] : '');
-    
-    
+
+
     $sql = "INSERT INTO contact (reden_contact , feedback_naam , feedback_email ,feedback_bericht) VALUES (?,?,?,?)";
     $conn->prepare($sql)->execute([
-        $reden_contact, $feedback_naam, $feedback_email, $feedback_bericht
+        $reden_contact,
+        $feedback_naam,
+        $feedback_email,
+        $feedback_bericht,
     ]);
 
 
@@ -37,7 +40,7 @@ if(isset($_POST["submit"])){
 
 
 <body>
-    <?php include_once('pages/header.php'); 
+    <?php include_once('pages/header.php');
 
     ?>
 
