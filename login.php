@@ -35,7 +35,8 @@ include_once('pages/pdo.php');
                         <p>gelukt wat wil je doen</p>
 
                     </div>
-                    <a href="menu-aanpassen.php">menu aanpassen</a>
+                    <a href="menu-aanpassen.php">gerecht veranderen</a>
+                    <a href="gerecht-toevoegen.php">gerecht toevoegen</a>
                     <a href="feedback-bekijken.php">feedback bekijken</a>
                 <?php } ?>
             </form>

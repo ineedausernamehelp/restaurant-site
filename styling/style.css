@@ -227,3 +227,6 @@ form {
     font-size: x-small;
   }
 }
+.delete-button{
+  width: 150%;
+}
