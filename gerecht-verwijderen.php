@@ -18,18 +18,14 @@ include_once('pages/pdo.php');
         rel="stylesheet">
 </head>
 <?php
-//update
-if (isset($_POST["gerecht-aanpassen"])) {
-    $naam = (isset($_POST['naam']) ? $_POST['naam'] : '');
-    $prijs = (isset($_POST['prijs']) ? $_POST['prijs'] : '');
-    $beschrijving = (isset($_POST['beschrijving']) ? $_POST['beschrijving'] : '');
-    $reviews = (isset($_POST['reviews']) ? $_POST['reviews'] : '');
-    $image = (isset($_POST['image']) ? $_POST['image'] : '');
-    $id = (isset($_POST['gerechtID']) ? intval($_POST['gerechtID']) : 0);
 
-    $sql = "UPDATE menu SET naam=?, prijs=?, beschrijving=?, reviews=?, image=? WHERE id = ?";
+//delete gerecht
+if (isset($_POST['id'])) {
+    $ID = $_POST['id'];
+
+    $sql = "DELETE FROM menu WHERE id  = :id";
     $stmt = $conn->prepare($sql);
-    $stmt->execute([$naam, $prijs, $beschrijving, $reviews, $image, $id]);
+    $stmt->execute(['id' => intval($ID)]);
 }
 
 
@@ -57,7 +53,8 @@ $data = $conn->query("SELECT * from menu")->fetchAll();
                     placeholder="reviews">
                 <input value="<?php echo $row['image']; ?>" type="url" name="image" id="" class="kleine-box"
                     placeholder="image">
-                <input type="submit" class="submit-knop" name="gerecht-aanpassen" value="gerechten-aanpassen">
+                <input type="hidden" name="id" id="" value="<?php echo $row['id']; ?>">
+                <input type="submit" name="delete" id="delete" value="delete">
 
             </form>
         <?php } ?>

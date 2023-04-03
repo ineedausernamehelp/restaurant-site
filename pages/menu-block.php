@@ -1,5 +1,9 @@
 <?php
 include_once('pages/pdo.php');
+if(isset($_POST['submit'])){
+    $_SESSION['winkelitem'] = $row['naam'] && $row['prijs'];
+    
+}
 
 ?>
 
@@ -25,25 +29,27 @@ include_once('pages/pdo.php');
         <main class="main-wrapper">
 
             <div class=" menu-block">
-                <img src=<?php echo $row['image']; ?> alt="foto van eten" class="menu-foto">
-                <div class="menu-tekst">
-                    <h2 class="gerechtnaam">
-                        <?php echo $row['naam']; ?>
-                    </h2>
-                    <div class="prijs-reviews-menu-tekst">
-                        <p>
-                            <?php echo $row['prijs']; ?>
+                <form action="winkelmandje.php" method="post" class="winkelmand-tekst">
+
+                    <img src=<?php echo $row['image']; ?> alt="foto van eten" class="menu-foto">
+                    <div class="menu-tekst">
+                        <h2 class="gerechtnaam">
+                            <?php echo $row['naam']; ?>
+                        </h2>
+                        <div class="prijs-reviews-menu-tekst">
+                            <p>
+                                <?php echo $row['prijs']; ?>
+                            </p>
+                            <p>
+                                <?php echo $row['reviews']; ?>
+                            </p>
+                        </div>
+                        <p class="beschrijving-gerecht-tekst">
+                            <?php echo $row['beschrijving']; ?>
                         </p>
-                        <p>
-                            <?php echo $row['reviews']; ?>
-                        </p>
-                    </div>
-                    <p class="beschrijving-gerecht-tekst">
-                        <?php echo $row['beschrijving']; ?>
-                    </p>
-                    <a href="" class="winkelmand-tekst">toevoegen aan winkelmandje <span
-                            class="winkelmand-tekst plus">&nbsp;+</span></a>
-                </div>
+                        <input type="submit" class="winkelmand-tekst" value="&nbsp;toevoegen aan winkelmand">
+                </form>
+            </div>
         </main>
     <?php } ?>
 </body>

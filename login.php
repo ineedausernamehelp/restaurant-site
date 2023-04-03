@@ -2,6 +2,10 @@
 include_once('pages/pdo.php');
 //gebruikersnaam admin
 //password admin123
+if(isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in'] == true){
+    header("Location: admin.php");
+
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,9 +22,28 @@ include_once('pages/pdo.php');
         rel="stylesheet">
 </head>
 
+<?php
+$data = $conn->query("SELECT * FROM users")->fetchAll();
+
+foreach ($data as $row) {
+
+
+
+    if (isset($_POST['gebruikersnaam']) && isset($_POST['password'])) {
+        if ($_POST['gebruikersnaam'] == $row['username'] && $_POST['password'] == $row['password']) {
+            $_SESSION['user_logged_in'] = true;
+            $_SESSION['gebruikersnaam'] = $row['username'];
+            //$_SESSION['password'] == $_POST['password'];
+
+            header("Location: admin.php")
+                ?>
+        <?php }
+    }
+} ?>
+
+
 <body>
     <?php include_once('pages/header.php');
-    $data = $conn->query("SELECT * FROM users")->fetchAll();
     ?>
     <main class="contact-form-height">
         <form action="login.php" method="post" class="main-wrapper">
@@ -29,19 +52,7 @@ include_once('pages/pdo.php');
             <input type="password" class="kleine-box" name="password" placeholder="Wachtwoord">
 
             <input type="submit" class="submit-knop" value="login">
-            <?php foreach ($data as $row) { ?>
-                <?php if ($_POST['gebruikersnaam'] == $row['username'] && $_POST['password'] == $row['password']) { ?>
-                    <div>
-                        <p>gelukt wat wil je doen</p>
-
-                    </div>
-                    <a href="menu-aanpassen.php">gerecht veranderen</a>
-                    <a href="gerecht-toevoegen.php">gerecht toevoegen</a>
-                    <a href="feedback-bekijken.php">feedback bekijken</a>
-                <?php } ?>
-            </form>
-
-        <?php } ?>
+        </form>
     </main>
 
 

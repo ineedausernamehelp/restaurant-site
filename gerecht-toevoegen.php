@@ -38,14 +38,14 @@ if (isset($_POST["submit"])) {
             placeholder="GerechtID Verandert niet">
         <input type="input" name="naam" id="" class="kleine-box" placeholder="naam">
         <input type="input" name="prijs" id="" class="kleine-box"
-            placeholder="prijs">
+            placeholder=    "prijs">
         <input  type="input" name="beschrijving" id="" class="kleine-box"
             placeholder="beschrijving">
         <input type="input" name="reviews" id="" class="kleine-box"
             placeholder="reviews">
         <input type="url" name="image" id="" class="kleine-box"
             placeholder="image">
-        <input type="submit" class="submit-knop" name="submit" value="gerechten-aanpassen">
+        <input type="submit" class="submit-knop" name="submit" value="gerechten toevoegen">
 
 
 

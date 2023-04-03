@@ -161,9 +161,8 @@ footer {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  height: 55%;
+  height: 35%;
   margin-right: 2.5%;
-  color: orangered;
 }
 
 .plus {
@@ -229,4 +228,8 @@ form {
 }
 .delete-button{
   width: 150%;
+}
+.font-size{
+  font-size: x-large;
+  color: aliceblue;
 }
