@@ -1,9 +1,5 @@
 <?php
 include_once('pages/pdo.php');
-if(isset($_POST['submit'])){
-    $_SESSION['winkelitem'] = $row['naam'] && $row['prijs'];
-    
-}
 
 ?>
 
@@ -47,7 +43,6 @@ if(isset($_POST['submit'])){
                         <p class="beschrijving-gerecht-tekst">
                             <?php echo $row['beschrijving']; ?>
                         </p>
-                        <input type="submit" class="winkelmand-tekst" value="&nbsp;toevoegen aan winkelmand">
                 </form>
             </div>
         </main>

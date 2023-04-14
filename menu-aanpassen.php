@@ -37,8 +37,8 @@ if (isset($_POST["gerecht-aanpassen"])) {
 $data = $conn->query("SELECT * from menu")->fetchAll();
 ?>
 
-<body>
     <?php include_once('pages/header.php') ?>
+<body>
     <main class="contact-form-height menu-aanpassen">
 
 

@@ -39,8 +39,8 @@ $data = $conn->query("SELECT * from menu")->fetchAll();
 
 
         <?php foreach ($data as $row) { ?>
-            <form action="menu-aanpassen.php" method="post" class="main-wrapper footer-margin">
-                <h2>Gerecht aanpassen</h2>
+            <form action="gerecht-verwijderen.php" method="post" class="main-wrapper footer-margin">
+                <h2>Gerecht verwijderen</h2>
                 <input value="<?php echo $row['id']; ?>" type="hidden" class="kleine-box" name="gerechtID"
                     placeholder="GerechtID Verandert niet">
                 <input value="<?php echo $row['naam']; ?>" type="input" name="naam" id="" class="kleine-box"
@@ -54,7 +54,13 @@ $data = $conn->query("SELECT * from menu")->fetchAll();
                 <input value="<?php echo $row['image']; ?>" type="url" name="image" id="" class="kleine-box"
                     placeholder="image">
                 <input type="hidden" name="id" id="" value="<?php echo $row['id']; ?>">
-                <input type="submit" name="delete" id="delete" value="delete">
+                <input type="submit" name="delete" id="delete" value="delete" onclick="deletePopup()">
+                <script>
+                    function deletePopup() {
+                        document.getElementById("delete").style.display = "block";
+
+                    }
+                </script>
 
             </form>
         <?php } ?>

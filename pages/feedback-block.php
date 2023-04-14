@@ -16,7 +16,6 @@ if (isset($_POST['contactID'])) {
     $sql = "DELETE FROM contact WHERE contactID  = :contactID";
     $stmt = $conn->prepare($sql);
     $stmt->execute(['contactID' => intval($contactID)]);
-    $stmt->debugDumpParams();
 }
 
 
