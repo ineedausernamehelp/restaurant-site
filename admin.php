@@ -1,9 +1,6 @@
 <?php include_once('pages/pdo.php');
-if(isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in'] == true){
-
-
-}
-else{
+if (isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in'] == true) {
+} else {
     header("Location: login.php");
 }
 
@@ -27,7 +24,7 @@ else{
         <a href="gerecht-toevoegen.php" class="font-size">gerecht toevoegen</a>
         <a href="feedback-bekijken.php" class="font-size">feedback bekijken</a>
         <a href="pages/logout.php" class="font-size">Logout</a>
-    
+
     </main>
 </body>
 

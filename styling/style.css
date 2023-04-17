@@ -122,11 +122,11 @@ footer {
   border-radius: 10%;
   margin-right: 2%;
 }
-.zoekknop{
+.zoekknop {
   border-radius: 20%;
   height: 50%;
 }
-.zoekbalk-container{
+.zoekbalk-container {
   margin-top: 2%;
   height: 10%;
   display: flex;
@@ -243,10 +243,10 @@ form {
     font-size: x-small;
   }
 }
-.delete-button{
+.delete-button {
   width: 150%;
 }
-.font-size{
+.font-size {
   font-size: x-large;
   color: aliceblue;
 }

@@ -18,11 +18,11 @@
 <body>
     <?php include_once('pages/header.php');
     ?>
-    
-        
+
+
     <?php
     include_once('pages/menu-block.php');
-    
+
 
     include_once('pages/footer.php'); ?>
 

@@ -25,7 +25,7 @@ include_once('pages/pdo.php');
     </form>
 
     <?php
-    if (isset($_POST['submit'])) {  
+    if (isset($_POST['submit'])) {
         $keyword = $_POST['keyword'];
         $query = $conn->prepare("SELECT * FROM menu WHERE naam Like '%$keyword%' ");
         $query->execute();

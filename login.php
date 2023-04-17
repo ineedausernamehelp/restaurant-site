@@ -46,10 +46,10 @@ foreach ($data as $row) {
     <main class="contact-form-height">
         <form action="login.php" method="post" class="main-wrapper">
             <h2>Login</h2>
-            <input type="input" class="kleine-box" name="gebruikersnaam" placeholder="Gebruikersnaam">
-            <input type="password" class="kleine-box" name="password" placeholder="Wachtwoord">
+            <input type="input" class="kleine-box" name="gebruikersnaam" placeholder="Gebruikersnaam" id="username">
+            <input type="password" class="kleine-box" name="password" placeholder="Wachtwoord" id="password">
 
-            <input type="submit" class="submit-knop" value="login">
+            <input type="submit" class="submit-knop" value="login" onsubmit="return alerts()">
         </form>
     </main>
 

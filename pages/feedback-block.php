@@ -39,7 +39,7 @@ if (isset($_POST['contactID'])) {
             </p>
             <form class="formpie-height" action="<?php $_PHP_SELF ?>" method="post">
                 <input type="hidden" name="contactID" id="" value="<?php echo $row['contactID']; ?>">
-                <input type="submit" name="delete" id="delete" value="delete">
+                <input type="submit" name="delete" id="delete" value="delete" onclick="return confirm('Are you sure you want to delete this item?');">
             </form>
         </main>
 
