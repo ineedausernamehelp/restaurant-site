@@ -26,25 +26,23 @@ if (isset($_POST["submit"])) {
         $reviews,
         $image,
     ]);
-
-
 }
 ?>
+<script>
+    function toevoeg_alert() {
+        
+    }
+</script>
 
 <body>
     <?php include_once('pages/header.php') ?>
     <form action="gerecht-toevoegen.php" method="post" class="main-wrapper footer-margin">
-        <input type="hidden" class="kleine-box" name="gerechtID"
-            placeholder="GerechtID Verandert niet">
+        <input type="hidden" class="kleine-box" name="gerechtID" placeholder="GerechtID Verandert niet">
         <input type="input" name="naam" id="" class="kleine-box" placeholder="naam">
-        <input type="input" name="prijs" id="" class="kleine-box"
-            placeholder=    "prijs">
-        <input  type="input" name="beschrijving" id="" class="kleine-box"
-            placeholder="beschrijving">
-        <input type="input" name="reviews" id="" class="kleine-box"
-            placeholder="reviews">
-        <input type="url" name="image" id="" class="kleine-box"
-            placeholder="image">
+        <input type="input" name="prijs" id="" class="kleine-box" placeholder="prijs">
+        <input type="input" name="beschrijving" id="" class="kleine-box" placeholder="beschrijving">
+        <input type="input" name="reviews" id="" class="kleine-box" placeholder="reviews">
+        <input type="url" name="image" id="" class="kleine-box" placeholder="image">
         <input type="submit" class="submit-knop" name="submit" value="gerechten toevoegen">
 
 

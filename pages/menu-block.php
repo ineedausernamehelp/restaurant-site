@@ -14,39 +14,79 @@ include_once('pages/pdo.php');
     <link rel="stylesheet" href="styling/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,300;1,400&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,300;1,400&display=swap" rel="stylesheet">
 </head>
 
 
 <body>
-    <?php $data = $conn->query("SELECT * FROM menu")->fetchAll(); ?>
-    <?php foreach ($data as $row) { ?>
-        <main class="main-wrapper">
+    <form action="menu.php" class="zoekbalk-container" method="post">
+        <input type="text" class="zoekbalk" name="keyword">
+        <input type="submit" value="zoeken" class="zoekknop" id="submit" name="submit">
+    </form>
 
-            <div class=" menu-block">
-                <form action="winkelmandje.php" method="post" class="winkelmand-tekst">
+    <?php
+    if (isset($_POST['submit'])) {  
+        $keyword = $_POST['keyword'];
+        $query = $conn->prepare("SELECT * FROM menu WHERE naam Like '%$keyword%' ");
+        $query->execute();
+        while ($row = $query->fetch()) { ?>
+            <main class="main-wrapper">
 
-                    <img src=<?php echo $row['image']; ?> alt="foto van eten" class="menu-foto">
-                    <div class="menu-tekst">
-                        <h2 class="gerechtnaam">
-                            <?php echo $row['naam']; ?>
-                        </h2>
-                        <div class="prijs-reviews-menu-tekst">
-                            <p>
-                                <?php echo $row['prijs']; ?>
+                <div class=" menu-block">
+                    <form action="winkelmandje.php" method="post" class="winkelmand-tekst">
+
+                        <img src=<?php echo $row['image']; ?> alt="foto van eten" class="menu-foto">
+                        <div class="menu-tekst">
+                            <h2 class="gerechtnaam">
+                                <?php echo $row['naam']; ?>
+                            </h2>
+                            <div class="prijs-reviews-menu-tekst">
+                                <p>
+                                    <?php echo $row['prijs']; ?>
+                                </p>
+                                <p>
+                                    <?php echo $row['reviews']; ?>
+                                </p>
+                            </div>
+                            <p class="beschrijving-gerecht-tekst">
+                                <?php echo $row['beschrijving']; ?>
                             </p>
-                            <p>
-                                <?php echo $row['reviews']; ?>
+                    </form>
+                </div>
+            </main>
+        <?php           }
+    } else {
+        $query = $conn->prepare("SELECT * FROM menu");
+        $query->execute();
+        while ($row = $query->fetch()) { ?>
+            <main class="main-wrapper">
+
+                <div class=" menu-block">
+                    <form action="winkelmandje.php" method="post" class="winkelmand-tekst">
+
+                        <img src=<?php echo $row['image']; ?> alt="foto van eten" class="menu-foto">
+                        <div class="menu-tekst">
+                            <h2 class="gerechtnaam">
+                                <?php echo $row['naam']; ?>
+                            </h2>
+                            <div class="prijs-reviews-menu-tekst">
+                                <p>
+                                    <?php echo $row['prijs']; ?>
+                                </p>
+                                <p>
+                                    <?php echo $row['reviews']; ?>
+                                </p>
+                            </div>
+                            <p class="beschrijving-gerecht-tekst">
+                                <?php echo $row['beschrijving']; ?>
                             </p>
-                        </div>
-                        <p class="beschrijving-gerecht-tekst">
-                            <?php echo $row['beschrijving']; ?>
-                        </p>
-                </form>
-            </div>
-        </main>
-    <?php } ?>
-</body>
+                    </form>
+                </div>
+            </main>
+
+
+    <?php    }
+    }
+    ?>
 
 </html>

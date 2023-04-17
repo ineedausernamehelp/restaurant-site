@@ -115,6 +115,23 @@ footer {
   width: 5%;
   margin-left: 1%;
 }
+/*zoekbalk */
+.zoekbalk {
+  width: 20%;
+  height: 50%;
+  border-radius: 10%;
+  margin-right: 2%;
+}
+.zoekknop{
+  border-radius: 20%;
+  height: 50%;
+}
+.zoekbalk-container{
+  margin-top: 2%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+}
 
 /*menu blokken*/
 .main-wrapper {

@@ -9,15 +9,20 @@
     <link rel="stylesheet" href="styling/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,300;1,400&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,300;1,400&display=swap" rel="stylesheet">
 </head>
+<?php
+
+?>
 
 <body>
     <?php include_once('pages/header.php');
-
-
-    include('pages/menu-block.php');
+    ?>
+    
+        
+    <?php
+    include_once('pages/menu-block.php');
+    
 
     include_once('pages/footer.php'); ?>
 
