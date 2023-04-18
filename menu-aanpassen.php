@@ -51,7 +51,7 @@ $data = $conn->query("SELECT * from menu")->fetchAll();
                 <input value="<?php echo $row['beschrijving']; ?>" type="input" name="beschrijving" id="" class="kleine-box" placeholder="beschrijving">
                 <input value="<?php echo $row['reviews']; ?>" type="input" name="reviews" id="" class="kleine-box" placeholder="reviews">
                 <input value="<?php echo $row['image']; ?>" type="url" name="image" id="" class="kleine-box" placeholder="image">
-                <input type="submit" class="submit-knop" name="gerecht-aanpassen" value="gerechten-aanpassen">
+                <input type="submit" class="submit-knop" name="gerecht-aanpassen" value="gerechten-aanpassen" onclick="return confirm('Are you sure you want to updaten this item?');">
 
             </form>
         <?php } ?>

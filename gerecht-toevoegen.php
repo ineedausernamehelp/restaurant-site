@@ -39,7 +39,7 @@ if (isset($_POST["submit"])) {
         <input type="input" name="beschrijving" id="" class="kleine-box" placeholder="beschrijving">
         <input type="input" name="reviews" id="" class="kleine-box" placeholder="reviews">
         <input type="url" name="image" id="" class="kleine-box" placeholder="image">
-        <input type="submit" class="submit-knop" name="submit" value="gerechten toevoegen" id="submit">
+        <input type="submit" class="submit-knop" name="submit" value="gerechten toevoegen" id="submit" onclick="return confirm('Are you sure you want to add this item?');">
 
 
 

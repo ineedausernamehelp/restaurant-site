@@ -49,7 +49,7 @@ foreach ($data as $row) {
             <input type="input" class="kleine-box" name="gebruikersnaam" placeholder="Gebruikersnaam" id="username">
             <input type="password" class="kleine-box" name="password" placeholder="Wachtwoord" id="password">
 
-            <input type="submit" class="submit-knop" value="login" onsubmit="return alerts()">
+            <input type="submit" class="submit-knop" value="login" onclick="return confirm('Are you sure you want to log in');">
         </form>
     </main>
 
